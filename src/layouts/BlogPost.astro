@@ -1,0 +1,46 @@
+---
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import { ViewTransitions } from 'astro:transitions';
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from '../components/home/FormattedDate.astro';
+import Layout from '../layouts/Layout.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <section class="py-5 sm:py-10">
+    <div class="mx-auto max-w-2xl px-4 sm:px-4 lg:max-w-7xl lg:px-8">
+      <div class="flex flex-col gap-10">
+        <div class="flex flex-col items-start gap-8 sm:gap-10 max-w-none">
+          <div class="flex  flex-col items-start gap-4 sm:gap-4">
+            <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+              {title}
+            </h1>
+            <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+              {description}
+            </p>
+            <h1 class="text-md sm:text-md text-primary-950/70 dark:text-primary-200/70">
+              Created on: <FormattedDate date={pubDate} />
+            </h1>
+          </div>
+        </div>
+        <img
+          class="h-auto w-full rounded-3xl"
+          width="768"
+          height="512"
+          src={heroImage}
+          alt="Hero picture"
+        />
+        <div class="prose prose-stone prose-xl dark:prose-invert prose-red max-w-none prose-img:rounded-xl">
+          
+            <slot />
+          
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

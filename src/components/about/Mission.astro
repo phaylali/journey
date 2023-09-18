@@ -1,59 +1,96 @@
 ---
 const stats = [
   {
-    name: 'Years',
-    value: '9',
+    name: 'CPU',
+    value: 'Amd Ryzen 5 5600G',
   },
   {
-    name: 'Experts',
-    value: '15',
+    name: 'CPU COOLER',
+    value: 'Ryzen Wraith Stealth Stock Cooler',
   },
   {
-    name: 'Projects',
-    value: '122',
+    name: 'MOTHERBOARD',
+    value: 'Asus TUF Gaming X570-Plus',
   },
   {
-    name: 'Awards',
-    value: "'9'",
+    name: 'MEMORY',
+    value: 'HP V8 DDR4 16G (8X2) 3600mhz RGB',
+  },
+
+  {
+    name: 'STORAGE',
+    value: 'Kingston NV1 NVME SSD 1Tb',
+  },
+  {
+    name: 'VIDEO CARD',
+    value: 'XFX Speedster QICK 319 AMD Radeon™ RX 6700 XT Black',
+  },
+  {
+    name: 'CASE',
+    value: 'Frontier Trendsonic Neptune 07A-2',
+  },
+  {
+    name: 'PSU',
+    value: 'Frontier AcePower FP650 650W 80+ Bronze Black Version',
+  },
+  {
+    name: 'CASE FANS',
+    value: 'Frontier X Series RGB',
+  },
+  {
+    name: 'MONITOR',
+    value: 'Asus TUF Gaming VG24VQE Curved Gaming Monitor | 23.6 inch 165Hz',
+  },
+  {
+    name: 'WORK OS',
+    value: 'Archlinux+Hyprland',
+  },
+  {
+    name: 'GAMING OS',
+    value: 'Ghost Spectre Superlite Windows 11',
+  },
+  {
+    name: 'DESK MAT',
+    value: 'Razer Goliathus',
+  },
+  {
+    name: 'HEADSET',
+    value: 'Kotion Each GS100',
+  },
+  {
+    name: 'KEYBOARD',
+    value: 'Epomaker TH80 Pro - ANSI / Theory - MDA / Gateron Pro Yellow Switch',
+  },
+  {
+    name: 'PHONE',
+    value: 'Google Pixel 6',
   },
 ];
 ---
 
-<section class="py-16 sm:py-20">
+<section class="py-8 sm:py-8">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
       <img
         class="mx-auto h-auto w-full max-w-xl rounded-3xl"
-        width="576"
-        height="864"
-        src="/assets/about.webp"
-        alt="Our experts working together"
+        width="768" height="512"
+        src="/assets/raiden shogun roll safe meme.webp"
+        alt="Phaylali, the founder of the omniversify"
       />
       <div class="flex flex-col gap-10">
         <!-- Mission description -->
         <div class="space-y-8 sm:space-y-12">
-          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our mission</h2>
+          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Who Am I?</h2>
           <div class="space-y-6">
             <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed
-              consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.
-              Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames
-              senectus vitae.
-            </p>
-            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem
-              nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet
-              quam urna. Sollicitudin tristique eros erat odio sed vitae, consequat turpis
-              elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat
-              donec laoreet quam urna.
-            </p>
-            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies.
-              Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum
-              consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-              fermentum lacus in. Viverra.
+              Greetings Earthlings, my name is Phaylali, I'm from Morocco 🇲🇦 , 28 y.o. an INFJ type personality, a Manchester United fan since 2007, I stream sometimes games like GTA V, Rust, CSGO, Skyrim, Genshin Impact ... I also tinker with software development and programming (especially flutter, node.js, next.js and now bun/astro), AI Image Generation using Stable Diffusion and I enjoy everything around tech and locally hosted AI solutions...
+
             </p>
           </div>
+        </div>
+        <div class="space-y-8 sm:space-y-12">
+          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">My Setup</h2>
+          
         </div>
 
         <!-- Stats -->
@@ -62,7 +99,7 @@ const stats = [
             stats.map((stat) => (
               <div class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border p-6">
                 <dt class="text-base">{stat.name}</dt>
-                <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>
+                <dd class="text-2xl font-medium tracking-tight">{stat.value}</dd>
               </div>
             ))
           }
