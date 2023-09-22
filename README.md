@@ -1,4 +1,4 @@
-# Stone: Astro Theme
+# Stone: Astro Theme (Modified by Phaylali to include an MD blogging feature)
 
 Stone is a free and open-source Astro theme specially designed for Business, Marketing, SaaS and Startup websites.
 
@@ -17,6 +17,7 @@ Stone is a free and open-source Astro theme specially designed for Business, Mar
 - **Google Fonts**
 - **Remix Icons**
 - Free Updates
+- Supports Blogging using MD and MDX format files
 
 ## Getting Started
 
@@ -33,6 +34,12 @@ Navigate to your project folder and install its dependencies:
 ```
 npm install
 ```
+or if you're running linux arch
+```
+npm install --ignore-scripts=false --foreground-scripts sharp
+```
+You can use Bun too but there is a problem where the above code doesn't work since Bun doesn't support Sharp yet, but it is expected to be added soon.
+but that problem is only with the installation , you can run this project with Bun faster than NPM.
 
 ### Start
 
@@ -41,6 +48,10 @@ Once the installation is done, you can now run your app:
 ```
 npm run dev
 ```
+or even better
+```
+bun astro dev
+```
 
 This runs the app in development mode. Open http://localhost:3000 to view it in the browser.
 
@@ -48,6 +59,10 @@ This runs the app in development mode. Open http://localhost:3000 to view it in 
 
 ```
 npm run build
+```
+or 
+```
+bun astro build
 ```
 
 This builds the app for production to the `./dist/` folder.
@@ -61,8 +76,10 @@ Inside the project, you'll see the following folders and files:
 ├── public/
 ├── src/
 │   ├── components/
+│   ├── content/
 │   ├── layouts/
-│   └── pages/
+│   ├── pages/
+│   └── consts.ts
 ├── .prettierrc
 ├── astro.config.mjs
 ├── package-lock.json
@@ -77,6 +94,7 @@ Inside the project, you'll see the following folders and files:
 - `src/components/*` - Reusable Astro components used to build pages.
 - `src/layouts/*` - Astro components that define the UI structure shared by one or more pages..
 - `src/pages/*` - Astro components used to create new pages on your site. Each page is exposed as a route based on its file name.
+- `src/content/*` - Blog posts made in MD, you can use MDX as well.
 - `.prettierrc` - Prettier configuration file.
 - `astro.config.mjs` - Astro configuration file.
 - `package.json` - File used by JavaScript package managers to manage your dependencies. It also defines the scripts that are commonly used to run Astro.
